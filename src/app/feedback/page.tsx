@@ -1,5 +1,6 @@
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import { EXTERNAL_LINKS, FEATURES, ORGANIZATION_INFO } from "@/data/constants";
 
 export const metadata: Metadata = {
   title: "Feedback",
@@ -36,20 +37,36 @@ export default function FeedbackPage() {
               </p>
 
               {/* Google Forms Embed */}
-              <div className="bg-muted/30 border-2 border-dashed border-muted rounded-lg p-8 text-center">
-                <MessageSquare className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Feedback Form</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Our feedback form will be embedded here using Google Forms
-                </p>
-                <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                  <p className="text-blue-800 dark:text-blue-200 text-sm">
-                    <strong>Coming Soon:</strong> We're setting up a
-                    comprehensive feedback system to collect your valuable
-                    input.
-                  </p>
+              {FEATURES.googleFormsIntegration &&
+              EXTERNAL_LINKS.googleForms.feedback ? (
+                <div className="bg-card border rounded-lg p-2">
+                  <iframe
+                    src={EXTERNAL_LINKS.googleForms.feedback}
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    className="rounded-lg"
+                    title="Feedback Form"
+                  >
+                    Loading feedback form...
+                  </iframe>
                 </div>
-              </div>
+              ) : (
+                <div className="bg-muted/30 border-2 border-dashed border-muted rounded-lg p-8 text-center">
+                  <MessageSquare className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="font-semibold mb-2">Feedback Form</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Our feedback form will be embedded here using Google Forms
+                  </p>
+                  <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                    <p className="text-blue-800 dark:text-blue-200 text-sm">
+                      <strong>Coming Soon:</strong> We're setting up a
+                      comprehensive feedback system to collect your valuable
+                      input.
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* What We're Looking For */}
@@ -102,10 +119,10 @@ export default function FeedbackPage() {
                       For detailed feedback or technical issues
                     </p>
                     <a
-                      href="mailto:feedback@nirnaya.app"
+                      href={`mailto:${ORGANIZATION_INFO.email}`}
                       className="text-blue-600 hover:text-blue-800 text-sm"
                     >
-                      feedback@nirnaya.app
+                      {ORGANIZATION_INFO.email}
                     </a>
                   </div>
                 </div>
@@ -128,7 +145,10 @@ export default function FeedbackPage() {
                     <p className="text-muted-foreground text-sm mb-2">
                       Physical address for formal correspondence
                     </p>
-                    <p className="text-blue-600 text-sm">Kathmandu, Nepal</p>
+                    <p className="text-blue-600 text-sm">
+                      {ORGANIZATION_INFO.address.city},{" "}
+                      {ORGANIZATION_INFO.address.country}
+                    </p>
                     <p className="text-muted-foreground text-xs">
                       (Exact address coming soon)
                     </p>

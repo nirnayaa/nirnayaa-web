@@ -40,13 +40,16 @@ npm run format
 - **App Router**: Uses Next.js App Router with `src/app/` directory
 - **Components**:
   - shadcn/ui components in `@/components/ui/`
-  - Custom components in `@/components/` (Header, Footer)
+  - Custom components in `@/components/` (Header, Footer, ElectionCountdown, StructuredData)
 - **Pages**:
-  - `/` - Homepage with project overview
+  - `/` - Homepage with project overview and election countdown
   - `/candidates` - Candidate information (coming soon)
   - `/voting-info` - Voting registration and polling information
   - `/voter-education` - Educational content about voting rights
   - `/feedback` - User feedback form and contact information
+- **Data Layer**:
+  - `@/data/constants.ts` - All project constants (election date, organization info, URLs, feature flags)
+  - `@/data/schema.ts` - Structured data schemas for SEO (JSON-LD)
 - **Utilities**: Shared utilities in `@/lib/` (includes `cn()` for Tailwind class merging)
 - **Path Aliases**: `@/*` maps to `./src/*`
 
@@ -90,6 +93,13 @@ npm run format
 - Page-specific components can be co-located with pages if needed
 - Maintain consistent props and styling patterns
 
+### Data Management
+- **Centralized Constants**: All configuration data is in `@/data/constants.ts`
+- **Structured Data**: SEO schemas are in `@/data/schema.ts`
+- **Feature Flags**: Control feature availability through `FEATURES` constant
+- **Single Source of Truth**: Election date, organization info, and URLs are centralized
+- **Easy Updates**: Change election date or other constants in one place to update entire app
+
 ## Development Approach
 
 **Target Audience**: Nepali citizens with varying levels of tech literacy
@@ -116,19 +126,25 @@ npm run format
 - Dark mode support throughout
 - Accessibility-focused for varying literacy levels
 
-### 🚧 Phase 2 (Current Priority):
-- Election countdown timer (March 5, 2026, Kathmandu time)
-- Enhanced SEO with structured data markup
-- Google Forms integration for feedback page
-- Performance optimizations
+### ✅ Phase 2 Complete - Enhanced Features:
+- Real-time election countdown timer with Kathmandu timezone
+- Centralized data management system (`@/data/constants.ts` and `@/data/schema.ts`)
+- Comprehensive structured data markup for SEO optimization
+- Google Forms integration framework (ready for form URL)
+- Feature flag system for controlled rollouts
 
-### 📋 Phase 3 (Future):
+### 🚧 Phase 3 (Next Priority):
 - Multi-language support (next-intl) - Nepali and English
+- Performance optimizations and bundle analysis
+- Enhanced accessibility features and screen reader support
+- Progressive Web App (PWA) capabilities
+
+### 📋 Phase 4 (Future):
 - Dynamic candidate database structure
 - Search and filter functionality for candidates
 - Interactive candidate comparison features
 
-### 📋 Phase 4 (Long-term):
+### 📋 Phase 5 (Long-term):
 - Real candidate data integration
 - User authentication and personalization
 - Advanced analytics and tracking

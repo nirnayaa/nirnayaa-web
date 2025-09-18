@@ -1,5 +1,6 @@
 import { Heart, Vote } from "lucide-react";
 import Link from "next/link";
+import { ORGANIZATION_INFO } from "@/data/constants";
 
 const footerLinks = {
   platform: [
@@ -25,14 +26,15 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Vote className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold">Nirnaya</span>
+              <span className="text-xl font-bold">
+                {ORGANIZATION_INFO.name}
+              </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-md">
-              Empowering Nepali citizens to make informed voting decisions
-              through comprehensive candidate education and election awareness.
+              {ORGANIZATION_INFO.description}
             </p>
             <p className="text-muted-foreground text-sm mt-2">
-              निर्णय - आफ्नो मतको सदुपयोग गर्नुहोस्
+              {ORGANIZATION_INFO.taglineNepali}
             </p>
           </div>
 
@@ -74,7 +76,8 @@ export function Footer() {
         {/* Bottom section */}
         <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Nirnaya. Built for the people of Nepal.
+            © {new Date().getFullYear()} {ORGANIZATION_INFO.name}. Built for the
+            people of {ORGANIZATION_INFO.address.country}.
           </p>
           <div className="flex items-center space-x-1 text-sm text-muted-foreground mt-2 sm:mt-0">
             <span>Made with</span>
