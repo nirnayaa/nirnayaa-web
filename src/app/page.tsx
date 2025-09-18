@@ -1,8 +1,8 @@
-import { Vote, Users, BookOpen, CheckCircle } from "lucide-react";
+import { BookOpen, CheckCircle, Users, Vote } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-16">
         <header className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
@@ -12,7 +12,8 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Empowering Nepali citizens to make informed voting decisions through candidate education and awareness
+            Empowering Nepali citizens to make informed voting decisions through
+            candidate education and awareness
           </p>
         </header>
 
@@ -23,7 +24,8 @@ export default function Home() {
               Know Your Candidates
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Learn about candidates' backgrounds, experience, and track records to make educated choices.
+              Learn about candidates' backgrounds, experience, and track records
+              to make educated choices.
             </p>
           </div>
 
@@ -33,7 +35,8 @@ export default function Home() {
               Understand Promises
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Compare manifestos and campaign promises to see which align with your values and priorities.
+              Compare manifestos and campaign promises to see which align with
+              your values and priorities.
             </p>
           </div>
 
@@ -43,7 +46,8 @@ export default function Home() {
               Make Informed Decisions
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Use comprehensive information to vote confidently for candidates who represent your interests.
+              Use comprehensive information to vote confidently for candidates
+              who represent your interests.
             </p>
           </div>
         </div>

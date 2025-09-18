@@ -38,7 +38,15 @@ npm run format
 ## Project Structure
 
 - **App Router**: Uses Next.js App Router with `src/app/` directory
-- **Components**: shadcn/ui components in `@/components/ui/`
+- **Components**:
+  - shadcn/ui components in `@/components/ui/`
+  - Custom components in `@/components/` (Header, Footer)
+- **Pages**:
+  - `/` - Homepage with project overview
+  - `/candidates` - Candidate information (coming soon)
+  - `/voting-info` - Voting registration and polling information
+  - `/voter-education` - Educational content about voting rights
+  - `/feedback` - User feedback form and contact information
 - **Utilities**: Shared utilities in `@/lib/` (includes `cn()` for Tailwind class merging)
 - **Path Aliases**: `@/*` maps to `./src/*`
 
@@ -62,3 +70,35 @@ npm run format
 - `components.json`: shadcn/ui configuration
 - `next.config.ts`: Next.js configuration (minimal setup)
 - `tsconfig.json`: TypeScript configuration with path aliases
+
+## Development Approach
+
+**Target Audience**: Nepali citizens with varying levels of tech literacy
+- **Accessibility First**: Simple, clear design for users who may struggle with complex interfaces
+- **Mobile-Responsive**: Mobile-first approach for widespread smartphone usage in Nepal
+- **Static Content**: Currently all pages are static for fast loading and easy deployment
+- **SEO Optimized**: Comprehensive metadata for search engine visibility
+
+## Content Strategy
+
+- **Multi-language Support**: Planned for Nepali and English
+- **Coming Soon Placeholders**: Used for features not yet implemented
+- **Official Links**: External links to government resources (Election Commission of Nepal)
+- **Educational Focus**: Emphasis on voter education and democratic participation
+
+## Upcoming Features (Implementation Priority)
+
+### Phase 1 (Next):
+- Election countdown timer (March 5, 2026)
+- Enhanced SEO with structured data
+- Improved accessibility features
+
+### Phase 2:
+- Multi-language support (next-intl)
+- Google Forms integration for feedback
+- Candidate database structure
+
+### Phase 3:
+- Dynamic candidate profiles
+- Search and filter functionality
+- Interactive features for candidate comparison
