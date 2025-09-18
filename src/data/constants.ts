@@ -10,51 +10,33 @@ export const ELECTION_INFO = {
     "General elections in Nepal scheduled for March 5, 2026. Citizens will vote for their representatives in a democratic process.",
 } as const;
 
-// Organization Information
-export const ORGANIZATION_INFO = {
+// Platform Information
+export const PLATFORM_INFO = {
   name: "Nirnaya",
   description:
-    "Empowering Nepali citizens to make informed voting decisions through candidate education and election awareness",
+    "A community initiative empowering Nepali citizens to make informed voting decisions through candidate education and election awareness",
   taglineNepali: "निर्णय - आफ्नो मतको सदुपयोग गर्नुहोस्",
   url: "https://nirnaya.app",
   logo: "https://nirnaya.app/logo.png",
-  email: "feedback@nirnaya.app",
-  address: {
-    country: "Nepal",
-    region: "Bagmati Province",
-    city: "Kathmandu",
-    countryCode: "NP",
-  },
 } as const;
 
 // External Links
 export const EXTERNAL_LINKS = {
   electionCommission: "https://www.election.gov.np",
   googleForms: {
-    feedback: "", // TODO: Add actual Google Forms link when created
+    feedback: "https://forms.gle/oAGbypNqUgCgDdkH8",
   },
-} as const;
-
-// Social Media Links (for future use)
-export const SOCIAL_LINKS = {
-  facebook: "",
-  twitter: "",
-  instagram: "",
-  youtube: "",
 } as const;
 
 // Feature Flags
 export const FEATURES = {
-  googleFormsIntegration: false, // Enable when Google Forms link is available
   multiLanguage: false, // Enable when i18n is implemented
   candidateProfiles: false, // Enable when candidate data is available
   userAuthentication: false, // Enable when auth is implemented
 } as const;
 
-// Development Status
-export const DEVELOPMENT_STATUS = {
-  phase1Complete: true,
-  phase2InProgress: true,
-  currentVersion: "0.2.0",
+// App Information
+export const APP_INFO = {
+  version: "0.2.0",
   lastUpdated: "2025-01-15",
 } as const;

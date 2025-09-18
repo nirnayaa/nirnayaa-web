@@ -1,23 +1,21 @@
-import { ELECTION_INFO, EXTERNAL_LINKS, ORGANIZATION_INFO } from "./constants";
+import { ELECTION_INFO, EXTERNAL_LINKS, PLATFORM_INFO } from "./constants";
 
-// Organization Schema
-export const organizationSchema = {
+// Website/Platform Schema (not an organization since it's a community initiative)
+export const websitePlatformSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: ORGANIZATION_INFO.name,
-  description: ORGANIZATION_INFO.description,
-  url: ORGANIZATION_INFO.url,
-  logo: ORGANIZATION_INFO.logo,
-  sameAs: [], // Will be populated when social media links are added
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: ORGANIZATION_INFO.address.countryCode,
-    addressRegion: ORGANIZATION_INFO.address.region,
-    addressLocality: ORGANIZATION_INFO.address.city,
+  "@type": "WebSite",
+  name: PLATFORM_INFO.name,
+  description: PLATFORM_INFO.description,
+  url: PLATFORM_INFO.url,
+  inLanguage: ["en", "ne"],
+  about: {
+    "@type": "Thing",
+    name: "Voter Education Nepal",
+    description: "Community-driven democratic participation and voter awareness in Nepal",
   },
   areaServed: {
     "@type": "Country",
-    name: ORGANIZATION_INFO.address.country,
+    name: "Nepal",
   },
 } as const;
 
@@ -33,10 +31,10 @@ export const electionEventSchema = {
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: {
     "@type": "Country",
-    name: ORGANIZATION_INFO.address.country,
+    name: "Nepal",
     address: {
       "@type": "PostalAddress",
-      addressCountry: ORGANIZATION_INFO.address.countryCode,
+      addressCountry: "NP",
     },
   },
   organizer: {
@@ -46,17 +44,3 @@ export const electionEventSchema = {
   },
 } as const;
 
-// Website Schema
-export const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: ORGANIZATION_INFO.name,
-  url: ORGANIZATION_INFO.url,
-  description: ORGANIZATION_INFO.description,
-  inLanguage: ["en", "ne"],
-  about: {
-    "@type": "Thing",
-    name: "Voter Education Nepal",
-    description: "Democratic participation and voter awareness in Nepal",
-  },
-} as const;

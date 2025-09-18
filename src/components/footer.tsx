@@ -1,6 +1,6 @@
 import { Heart, Vote } from "lucide-react";
 import Link from "next/link";
-import { ORGANIZATION_INFO } from "@/data/constants";
+import { APP_INFO, PLATFORM_INFO } from "@/data/constants";
 
 const footerLinks = {
   platform: [
@@ -27,14 +27,14 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Vote className="h-8 w-8 text-blue-600" />
               <span className="text-xl font-bold">
-                {ORGANIZATION_INFO.name}
+                {PLATFORM_INFO.name}
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-md">
-              {ORGANIZATION_INFO.description}
+              {PLATFORM_INFO.description}
             </p>
             <p className="text-muted-foreground text-sm mt-2">
-              {ORGANIZATION_INFO.taglineNepali}
+              {PLATFORM_INFO.taglineNepali}
             </p>
           </div>
 
@@ -75,10 +75,15 @@ export function Footer() {
 
         {/* Bottom section */}
         <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} {ORGANIZATION_INFO.name}. Built for the
-            people of {ORGANIZATION_INFO.address.country}.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-4">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} {PLATFORM_INFO.name}. A community initiative for the
+              people of Nepal.
+            </p>
+            <span className="text-xs text-muted-foreground">
+              v{APP_INFO.version}
+            </span>
+          </div>
           <div className="flex items-center space-x-1 text-sm text-muted-foreground mt-2 sm:mt-0">
             <span>Made with</span>
             <Heart className="h-4 w-4 text-red-500 fill-current" />

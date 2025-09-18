@@ -4,7 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { StructuredData } from "@/components/structured-data";
-import { organizationSchema, websiteSchema } from "@/data/schema";
+import { websitePlatformSchema } from "@/data/schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -84,11 +84,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <StructuredData data={organizationSchema} />
-        <StructuredData data={websiteSchema} />
+        <StructuredData data={websitePlatformSchema} />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gray-50`}
       >
         <div className="relative flex min-h-screen flex-col">
           <Header />
