@@ -2,6 +2,14 @@ import { BookOpen, CheckCircle, Users, Vote } from "lucide-react";
 import { ElectionCountdown } from "@/components/election-countdown";
 import { StructuredData } from "@/components/structured-data";
 import { electionEventSchema } from "@/data/schema";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   return (
@@ -28,51 +36,65 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-              <Users className="h-8 w-8 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                Know Your Candidates
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Learn about candidates' backgrounds, experience, and track
-                records to make educated choices.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <Users className="h-8 w-8 text-blue-600 mb-2" />
+                <CardTitle>Know Your Candidates</CardTitle>
+                <CardDescription>
+                  Learn about candidates' backgrounds, experience, and track
+                  records to make educated choices.
+                </CardDescription>
+              </CardHeader>
+            </Card>
 
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-              <BookOpen className="h-8 w-8 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                Understand Promises
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Compare manifestos and campaign promises to see which align with
-                your values and priorities.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <BookOpen className="h-8 w-8 text-blue-600 mb-2" />
+                <CardTitle>Understand Promises</CardTitle>
+                <CardDescription>
+                  Compare manifestos and campaign promises to see which align
+                  with your values and priorities.
+                </CardDescription>
+              </CardHeader>
+            </Card>
 
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-              <CheckCircle className="h-8 w-8 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                Make Informed Decisions
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Use comprehensive information to vote confidently for candidates
-                who represent your interests.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <CheckCircle className="h-8 w-8 text-blue-600 mb-2" />
+                <CardTitle>Make Informed Decisions</CardTitle>
+                <CardDescription>
+                  Use comprehensive information to vote confidently for
+                  candidates who represent your interests.
+                </CardDescription>
+              </CardHeader>
+            </Card>
           </div>
 
-          <div className="text-center">
-            <div className="bg-blue-600 text-white rounded-lg p-8 inline-block">
-              <h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
-              <p className="text-blue-100 mb-4">
-                We're building Nepal's most comprehensive voter education
-                platform
-              </p>
-              <div className="text-sm text-blue-200">
-                Currently in development - Education module POC
-              </div>
-            </div>
+          <div className="flex justify-center">
+            <Card className="max-w-md">
+              <CardHeader className="text-center">
+                <div className="flex justify-center mb-2">
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-600 text-white hover:bg-blue-700"
+                  >
+                    Coming Soon
+                  </Badge>
+                </div>
+                <CardTitle className="text-2xl">
+                  Nepal's Most Comprehensive Platform
+                </CardTitle>
+                <CardDescription>
+                  We're building Nepal's most comprehensive voter education
+                  platform
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Badge variant="outline" className="text-xs">
+                  Currently in development - Education module POC
+                </Badge>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
