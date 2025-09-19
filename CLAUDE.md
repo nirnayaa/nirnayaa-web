@@ -235,3 +235,56 @@ npm run format
 - Future i18n implementation should use next-intl
 - Consider right-to-left text support if needed
 - Cultural sensitivity in content and design choices
+
+## Deployment
+
+### GitHub Pages Deployment
+The application is configured for automatic deployment to GitHub Pages using static export.
+
+#### Configuration
+- **Static Export**: Configured via `output: 'export'` in `next.config.ts`
+- **Base Path**: Uses `/nirnayaa-web` for GitHub Pages subdirectory
+- **Image Optimization**: Disabled (`unoptimized: true`) for static hosting
+- **Trailing Slash**: Enabled for better GitHub Pages compatibility
+
+#### Deployment Process
+1. **Automatic**: Push to `main` branch triggers GitHub Actions workflow
+2. **Manual**: Run `npm run deploy` locally to build static files
+3. **Files**: Static files are generated in `out/` directory
+
+#### GitHub Actions Workflow
+- **File**: `.github/workflows/deploy.yml`
+- **Triggers**: Push to main branch
+- **Process**:
+  1. Install dependencies
+  2. Run linting checks
+  3. Build static export
+  4. Deploy to GitHub Pages
+- **Permissions**: Requires Pages write permission and id-token
+
+#### Local Testing
+```bash
+# Build for production
+npm run build
+
+# Test locally (files in out/ directory)
+npm run deploy
+```
+
+#### GitHub Repository Settings
+To enable GitHub Pages deployment:
+1. Go to repository Settings → Pages
+2. Set Source to "GitHub Actions"
+3. **For Organization Repos**: The site will be available at: `https://organization-name.github.io/repository-name/`
+4. **For User Repos**: The site would be at: `https://username.github.io/repository-name/`
+
+#### Organization vs User Repository
+- **Organization repo** (current setup): `https://nirnaya.github.io/nirnayaa-web/`
+- Configuration automatically handles the correct base path
+- Update `GITHUB_ORGANIZATION` and `GITHUB_REPOSITORY` in `next.config.ts` if different
+
+#### Important Notes
+- All pages are pre-rendered as static HTML
+- No server-side features (API routes, middleware)
+- Images and assets are served from the same domain
+- `.nojekyll` file prevents Jekyll processing
