@@ -112,48 +112,36 @@ export function ElectionCountdown() {
         aria-label="Election countdown timer"
       >
         <div className="text-center">
-          <div
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2"
-            aria-label={`${timeLeft.days} ${timeLeft.days === 1 ? "day" : "days"} remaining`}
-          >
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 block">
             {timeLeft.days.toString().padStart(2, "0")}
-          </div>
+          </span>
           <div className="text-xs md:text-sm text-gray-500 uppercase tracking-wide">
             {timeLeft.days === 1 ? "Day" : "Days"}
           </div>
         </div>
 
         <div className="text-center">
-          <div
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2"
-            aria-label={`${timeLeft.hours} ${timeLeft.hours === 1 ? "hour" : "hours"} remaining`}
-          >
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 block">
             {timeLeft.hours.toString().padStart(2, "0")}
-          </div>
+          </span>
           <div className="text-xs md:text-sm text-gray-500 uppercase tracking-wide">
             {timeLeft.hours === 1 ? "Hour" : "Hours"}
           </div>
         </div>
 
         <div className="text-center">
-          <div
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2"
-            aria-label={`${timeLeft.minutes} ${timeLeft.minutes === 1 ? "minute" : "minutes"} remaining`}
-          >
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 block">
             {timeLeft.minutes.toString().padStart(2, "0")}
-          </div>
+          </span>
           <div className="text-xs md:text-sm text-gray-500 uppercase tracking-wide">
             {timeLeft.minutes === 1 ? "Minute" : "Minutes"}
           </div>
         </div>
 
         <div className="text-center">
-          <div
-            className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2"
-            aria-label={`${timeLeft.seconds} ${timeLeft.seconds === 1 ? "second" : "seconds"} remaining`}
-          >
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 block">
             {timeLeft.seconds.toString().padStart(2, "0")}
-          </div>
+          </span>
           <div className="text-xs md:text-sm text-gray-500 uppercase tracking-wide">
             {timeLeft.seconds === 1 ? "Second" : "Seconds"}
           </div>

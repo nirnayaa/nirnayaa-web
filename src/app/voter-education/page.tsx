@@ -84,22 +84,40 @@ export default function VoterEducationPage() {
             Categories
           </h2>
           <div className="flex flex-wrap gap-2">
-            <Badge variant="default" className="cursor-pointer bg-blue-600 hover:bg-blue-700">
+            <Badge
+              variant="default"
+              className="cursor-pointer bg-blue-600 hover:bg-blue-700"
+            >
               Voting Rights
             </Badge>
-            <Badge variant="secondary" className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200">
+            <Badge
+              variant="secondary"
+              className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200"
+            >
               Candidate Evaluation
             </Badge>
-            <Badge variant="secondary" className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200">
+            <Badge
+              variant="secondary"
+              className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200"
+            >
               Democratic Process
             </Badge>
-            <Badge variant="secondary" className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200">
+            <Badge
+              variant="secondary"
+              className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200"
+            >
               Election Laws
             </Badge>
-            <Badge variant="secondary" className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200">
+            <Badge
+              variant="secondary"
+              className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200"
+            >
               Civic Engagement
             </Badge>
-            <Badge variant="secondary" className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200">
+            <Badge
+              variant="secondary"
+              className="cursor-pointer bg-blue-100 text-blue-700 hover:bg-blue-200"
+            >
               Voter Registration
             </Badge>
           </div>
@@ -114,7 +132,9 @@ export default function VoterEducationPage() {
             <Card className="group hover:shadow-lg transition-shadow duration-200 border-blue-200">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <Badge variant="default" className="bg-blue-600">Voting Rights</Badge>
+                  <Badge variant="default" className="bg-blue-600">
+                    Voting Rights
+                  </Badge>
                   <div className="flex items-center text-sm text-blue-500">
                     <Clock className="h-4 w-4 mr-1" />5 min read
                   </div>
@@ -138,7 +158,11 @@ export default function VoterEducationPage() {
                     Essential Guide
                   </div>
                 </div>
-                <Button variant="outline" className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50" disabled>
+                <Button
+                  variant="outline"
+                  className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50"
+                  disabled
+                >
                   Read Article
                 </Button>
               </CardContent>
@@ -147,7 +171,12 @@ export default function VoterEducationPage() {
             <Card className="group hover:shadow-lg transition-shadow duration-200 border-blue-200">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-700">Candidate Evaluation</Badge>
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-100 text-blue-700"
+                  >
+                    Candidate Evaluation
+                  </Badge>
                   <div className="flex items-center text-sm text-blue-500">
                     <Clock className="h-4 w-4 mr-1" />8 min read
                   </div>
@@ -171,7 +200,11 @@ export default function VoterEducationPage() {
                     In-Depth Analysis
                   </div>
                 </div>
-                <Button variant="outline" className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50" disabled>
+                <Button
+                  variant="outline"
+                  className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50"
+                  disabled
+                >
                   Read Article
                 </Button>
               </CardContent>
@@ -180,7 +213,12 @@ export default function VoterEducationPage() {
             <Card className="group hover:shadow-lg transition-shadow duration-200 border-blue-200">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-700">Democratic Process</Badge>
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-100 text-blue-700"
+                  >
+                    Democratic Process
+                  </Badge>
                   <div className="flex items-center text-sm text-blue-500">
                     <Clock className="h-4 w-4 mr-1" />6 min read
                   </div>
@@ -204,7 +242,11 @@ export default function VoterEducationPage() {
                     Research Guide
                   </div>
                 </div>
-                <Button variant="outline" className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50" disabled>
+                <Button
+                  variant="outline"
+                  className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50"
+                  disabled
+                >
                   Read Article
                 </Button>
               </CardContent>
@@ -221,7 +263,12 @@ export default function VoterEducationPage() {
             <Card className="group hover:shadow-lg transition-shadow duration-200 border-blue-200">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-700">Civic Engagement</Badge>
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-100 text-blue-700"
+                  >
+                    Civic Engagement
+                  </Badge>
                   <div className="flex items-center text-sm text-blue-500">
                     <Clock className="h-4 w-4 mr-1" />4 min read
                   </div>
@@ -245,7 +292,11 @@ export default function VoterEducationPage() {
                     Community Guide
                   </div>
                 </div>
-                <Button variant="outline" className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50" disabled>
+                <Button
+                  variant="outline"
+                  className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50"
+                  disabled
+                >
                   Read Article
                 </Button>
               </CardContent>
@@ -254,7 +305,12 @@ export default function VoterEducationPage() {
             <Card className="group hover:shadow-lg transition-shadow duration-200 border-blue-200">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-700">Voter Registration</Badge>
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-100 text-blue-700"
+                  >
+                    Voter Registration
+                  </Badge>
                   <div className="flex items-center text-sm text-blue-500">
                     <Clock className="h-4 w-4 mr-1" />3 min read
                   </div>
@@ -278,7 +334,11 @@ export default function VoterEducationPage() {
                     How-To Guide
                   </div>
                 </div>
-                <Button variant="outline" className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50" disabled>
+                <Button
+                  variant="outline"
+                  className="w-full mt-4 border-blue-300 text-blue-600 hover:bg-blue-50"
+                  disabled
+                >
                   Read Article
                 </Button>
               </CardContent>
@@ -297,8 +357,14 @@ export default function VoterEducationPage() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input placeholder="Enter your email" className="border-blue-300 focus:border-blue-500" disabled />
-              <Button className="bg-blue-600 hover:bg-blue-700" disabled>Subscribe</Button>
+              <Input
+                placeholder="Enter your email"
+                className="border-blue-300 focus:border-blue-500"
+                disabled
+              />
+              <Button className="bg-blue-600 hover:bg-blue-700" disabled>
+                Subscribe
+              </Button>
             </div>
             <p className="text-sm text-blue-600 mt-4">
               Newsletter subscription coming soon!
