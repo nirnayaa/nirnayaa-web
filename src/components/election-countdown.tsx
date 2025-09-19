@@ -60,9 +60,7 @@ export function ElectionCountdown() {
         <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
           Next Election
         </h2>
-        <p className="text-gray-600">
-          Loading countdown...
-        </p>
+        <p className="text-gray-600">Loading countdown...</p>
       </div>
     );
   }
@@ -78,7 +76,9 @@ export function ElectionCountdown() {
       <div className="bg-white border border-green-200 rounded-lg p-8 text-center">
         <div className="flex items-center justify-center mb-4">
           <Vote className="h-8 w-8 mr-3 text-green-600" />
-          <h2 className="text-3xl font-semibold text-green-900">Election Day!</h2>
+          <h2 className="text-3xl font-semibold text-green-900">
+            Election Day!
+          </h2>
         </div>
         <p className="text-green-700 text-lg mb-4">
           Today is Election Day - Make your voice heard!

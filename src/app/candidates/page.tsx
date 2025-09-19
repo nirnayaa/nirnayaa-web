@@ -28,7 +28,9 @@ export default function CandidatesPage() {
         <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
           <div className="max-w-md mx-auto">
             <Search className="h-16 w-16 text-gray-400 mx-auto mb-6" />
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
             <p className="text-gray-600 mb-6">
               We're working hard to compile comprehensive candidate information
               including:
@@ -53,7 +55,9 @@ export default function CandidatesPage() {
         <div className="grid md:grid-cols-2 gap-6 mt-12">
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <Search className="h-8 w-8 text-blue-600 mb-4" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Search & Filter</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Search & Filter
+            </h3>
             <p className="text-gray-600 text-sm">
               Find candidates by constituency, party, name, or key issues that
               matter to you.
@@ -61,7 +65,9 @@ export default function CandidatesPage() {
           </div>
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <Filter className="h-8 w-8 text-blue-600 mb-4" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Compare Candidates</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Compare Candidates
+            </h3>
             <p className="text-gray-600 text-sm">
               Side-by-side comparison of candidates' positions, experience, and
               promises.

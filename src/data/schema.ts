@@ -11,7 +11,8 @@ export const websitePlatformSchema = {
   about: {
     "@type": "Thing",
     name: "Voter Education Nepal",
-    description: "Community-driven democratic participation and voter awareness in Nepal",
+    description:
+      "Community-driven democratic participation and voter awareness in Nepal",
   },
   areaServed: {
     "@type": "Country",
@@ -43,4 +44,3 @@ export const electionEventSchema = {
     url: EXTERNAL_LINKS.electionCommission,
   },
 } as const;
-

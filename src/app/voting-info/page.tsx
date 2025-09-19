@@ -28,7 +28,9 @@ export default function VotingInfoPage() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <Calendar className="h-8 w-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Election Date</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Election Date
+            </h3>
             <p className="text-2xl font-bold text-blue-600 mb-2">
               March 5, 2026
             </p>
@@ -40,7 +42,9 @@ export default function VotingInfoPage() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <MapPin className="h-8 w-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Voter Registration</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Voter Registration
+            </h3>
             <p className="text-gray-600 mb-4">
               Ensure you're registered to vote in your constituency.
             </p>
@@ -115,7 +119,9 @@ export default function VotingInfoPage() {
           </section>
 
           <section className="bg-white border border-gray-200 rounded-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Important Deadlines</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              Important Deadlines
+            </h2>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <p className="text-blue-800">
                 <strong>Note:</strong> Specific registration deadlines will be
@@ -128,7 +134,9 @@ export default function VotingInfoPage() {
 
         {/* Contact Information */}
         <div className="mt-12 text-center">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Need Help?</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            Need Help?
+          </h2>
           <p className="text-gray-600 mb-4">
             For official information, contact the Election Commission of Nepal
           </p>

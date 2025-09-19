@@ -26,9 +26,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Vote className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold">
-                {PLATFORM_INFO.name}
-              </span>
+              <span className="text-xl font-bold">{PLATFORM_INFO.name}</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-md">
               {PLATFORM_INFO.description}
@@ -77,8 +75,8 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t flex flex-col sm:flex-row justify-between items-center">
           <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} {PLATFORM_INFO.name}. A community initiative for the
-              people of Nepal.
+              © {new Date().getFullYear()} {PLATFORM_INFO.name}. A community
+              initiative for the people of Nepal.
             </p>
             <span className="text-xs text-muted-foreground">
               v{APP_INFO.version}

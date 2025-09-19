@@ -164,6 +164,66 @@ npm run format
 - Screen reader compatibility
 - Keyboard navigation support
 
+### Design Consistency & Color Scheme Requirements
+**CRITICAL**: Always maintain consistent visual identity across all pages and components
+
+#### Primary Color Scheme
+- **Primary Blue**: `text-blue-600`, `bg-blue-600` for main elements, badges, buttons
+- **Secondary Blue**: `text-blue-500`, `bg-blue-100`, `border-blue-200` for subtle elements
+- **Accent Colors**:
+  - Blue variants: `bg-blue-50`, `border-blue-300`, `hover:bg-blue-700`
+  - Green: `text-green-600` for success states and checkmarks
+  - Yellow: `text-yellow-600` for warning/info icons (lightbulb, etc.)
+- **Text Colors**:
+  - Primary: `text-gray-900` for headings
+  - Secondary: `text-blue-500` for metadata, timestamps, small text
+  - Descriptions: `text-gray-600` for card descriptions and body text
+
+#### Component Styling Standards
+**shadcn/ui Components**: Always apply blue theme overrides to maintain brand consistency
+- **Cards**: Add `border-blue-200` to all Card components
+- **Buttons**:
+  - Outline buttons: `border-blue-300 text-blue-600 hover:bg-blue-50`
+  - Primary buttons: `bg-blue-600 hover:bg-blue-700`
+- **Badges**:
+  - Primary: `bg-blue-600` (for active/selected states)
+  - Secondary: `bg-blue-100 text-blue-700` (for category tags)
+- **Inputs**: `border-blue-300 focus:border-blue-500`
+- **Search sections**: Use `bg-blue-50 border-blue-200` for background containers
+
+#### Icon Color Standards
+- **Functional icons**: `text-blue-600` (default)
+- **Status indicators**:
+  - Success/Complete: `text-green-600`
+  - Warning/Info: `text-yellow-600`
+  - Error: `text-red-600`
+- **Metadata icons**: `text-blue-500` (clocks, calendars)
+
+#### Background Patterns
+- **Featured sections**: `bg-blue-50` with `border-blue-200`
+- **Newsletter/CTA sections**: `bg-blue-50` with blue text variants
+- **Cards**: White background with blue borders and hover effects
+
+#### Hover & Interactive States
+- **Cards**: `hover:shadow-lg transition-shadow duration-200`
+- **Links/Titles**: `group-hover:text-blue-600 transition-colors`
+- **Buttons**: Appropriate blue hover states for each variant
+- **Badges**: `hover:bg-blue-200` for interactive categories
+
+#### Implementation Rules
+1. **NEVER** use default gray/neutral colors for primary elements
+2. **ALWAYS** apply blue theme overrides when using shadcn/ui components
+3. **MAINTAIN** color consistency when adding new pages or components
+4. **TEST** color contrast for accessibility compliance
+5. **PRESERVE** semantic color meanings (green=success, yellow=warning, etc.)
+
+#### Quick Reference: Replace These Default Colors
+- `text-gray-500` → `text-blue-500` (metadata, timestamps)
+- `border-gray-200` → `border-blue-200` (card borders)
+- `bg-gray-50` → `bg-blue-50` (section backgrounds)
+- Default Badge colors → Blue-themed variants
+- Default Button colors → Blue-themed variants
+
 ### Performance Considerations
 - Static generation for all current pages
 - Image optimization for any future media content
